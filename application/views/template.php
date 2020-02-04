@@ -148,7 +148,7 @@
 					</li>
 					<li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                Costumer
               </p>
@@ -232,14 +232,18 @@
             </ul>
           </li>
 
-          <li class="nav-header">MISCELLANEOUS</li>
+			 <!-- cek level apabila level sesuai maka tertampil-->
+					<?php if($this->session->userdata('level') == 1){ ?>
+          <li class="nav-header">Set</li>
           <li class="nav-item">
-            <a href="https://adminlte.io/docs/3.0" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
-              <p>Documentation</p>
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>Users</p>
             </a>
-          </li>
-                    <li class="nav-header">LABELS</li>
+					</li>
+				<?php	} ?>
+
+				<li class="nav-header">LABELS</li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-circle text-danger"></i>
