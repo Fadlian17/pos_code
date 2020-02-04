@@ -6,6 +6,6 @@ class Supplier extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('template','supplier');
+		$this->template->load('template','supplier/supplier_data');
 	}
 }
