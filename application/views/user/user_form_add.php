@@ -6,7 +6,7 @@
             <h3 class="box-title">Tambah Pengguna</h3>
             <div class="pull-right">
               <a href="<?=site_url('user')?>" class="btn btn-warning btn-flat">
-              <i class="fa fa-user-undo"></i> Back
+              <i class="fas fa-undo-alt"></i> Back
               </a>
             </div>
 
@@ -32,10 +32,22 @@
                             </div>
                             <div class="form-group">
                                 <label>Address *</label>
-                                <input type="fullname" name="username" class="form-control" placeholder="address">
+                                <textarea name="fullname" class="form-control"></textarea>
                             </div>
-                        
-
+                            <div class="form-group">
+                                <label>Level*</label>
+                                <select name="level" class="form-control">
+                                    <option value="">Pilih</option>
+                                    <option value="1">Admin</option>
+                                    <option value="2">Kasir</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success btn-flat">
+                                        <i class="fa fa-paper-line"></i>Save
+                                </button>
+                                <button type="Reset" class="btn btn-danger btn-flat">Reset</button>
+                            </div>
                         </form>
                     </div>
                 </div>
