@@ -68,16 +68,16 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Admin</span>
+              <span class="hidden-xs"><?=$this->fungsi->user_login()->username?></span>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" style="margin-left: -150px">
               <!-- User image -->
               <li class="user-header">
                 <img src="assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Fadlian
-                  <small>Jakarta</small>
+                  <?=ucfirst($this->fungsi->user_login()->username)?>
+                  <small><?=$this->fungsi->user_login()->address?></small>
                 </p>
               </li>
               <!-- Menu Footer-->
@@ -138,7 +138,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="<?=site_url('supplier')?>" class="nav-link">
               <i class="nav-icon fas fa-store-alt"></i>
               <p>
                 Supplier
