@@ -31,14 +31,18 @@
                         <td><?=$data->name?></td>
                         <td><?=$data->address?></td>
                         <td><?=$data->level == 1? "admin":"kasir"?></td>
-                        <td>
-                          <!--aksi update & delete-->
-                          <a href="<?=site_url('user/edit/')?>" class="btn btn-warning btn-xs">
-                          <i class="fa fa-pen"></i> Edit 
-                          </a>
-                          <a href="<?=site_url('user/edit/')?>" class="btn btn-danger btn-xs">
-                          <i class="fa fa-eraser"></i> Delete 
-                          </a>
+                        <td class="text-center" width="160px">
+						  <!--aksi update & delete hak akses-->
+						  <form action="<?=site_url('user/delete')?>" method="post">
+                          	<a href="<?=site_url('user/edit/'.$data->user_id)?>" class="btn btn-warning btn-xs">
+                          	<i class="fa fa-pen"></i> Edit 
+                          	</a>
+						  
+						  	<input type="hidden" name="user_id" value="<?=$data->user_id?>">
+						  		<button onclick="return confirm('Apakah anda yakin mau menghapus?')" class="btn btn-danger btn-xs">
+                         		 	<i class="fa fa-trash"></i> Delete 
+						  		</button>  
+						  </form>
                         </td>
                     </tr>
                 <?php
