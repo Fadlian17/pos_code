@@ -120,7 +120,7 @@
           <img src="assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Fadlian Alfansyah</a>
+          <a href="" class="d-block"><?=$this->fungsi->user_login()->username?></a>
         </div>
       </div>
 
@@ -130,7 +130,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <a href="<?=site_url('dashboard')?>" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -147,10 +147,10 @@
             </a>
 					</li>
 					<li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="<?=site_url('customer')?>" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
-               Costumer
+               Customer
               </p>
             </a>
 					</li>
@@ -236,7 +236,7 @@
 					<?php if($this->session->userdata('level') == 1){ ?>
           <li class="nav-header">Set</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="<?=site_url('user')?>" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>Users</p>
             </a>
