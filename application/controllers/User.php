@@ -7,6 +7,7 @@ class User extends CI_Controller {
 	{
 		parent::__construct();
 		check_not_login();
+		check_admin();
 		$this->load->model('user_m');
 		$this->load->library('form_validation');
 	}
@@ -104,7 +105,7 @@ class User extends CI_Controller {
 		}
 	}
 	
-	public function delete()
+	public function delete($id)
 	{
 		$id = $this->input->post('user_id');
 		$this->user_m->delete($id);
